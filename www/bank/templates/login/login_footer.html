@@ -1,0 +1,188 @@
+<div ui-view="footer" ng-show="isVisibleFooter()" class="ng-scope">
+        <footer class="bch-footer ng-scope pt-0"
+                ng-class="{'pt-0': !isCambioClaveCiam() , 'footer-olvido-clave': isCambioClaveCiam() }">
+            <!-- ngIf: state.current.name == 'login' -->
+            <div class="bg-white ng-scope" ng-if="state.current.name == 'login'">
+                <div class="container pl-30 pr-30">
+                    <div class="slick-container clearfix">
+                        <slick class="control-slick ng-isolate-scope slick-initialized slick-slider"
+                               responsive="breakpoints" dots="false" touch-move="false">
+                            <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous"
+                                    role="button" style="display: block;">Previous
+                            </button><!-- ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <!-- end ngRepeat: item in listCarouselTips -->
+                            <div aria-live="polite" class="slick-list draggable">
+                                <div class="slick-track"
+                                     style="opacity: 1; width: 4440px; transform: translate3d(-1480px, 0px, 0px); transition: transform 300ms ease 0s;"
+                                     role="listbox">
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;"
+                                         data-slick-index="-3"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span
+                                                class="ion-ios-locked-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Es clave no dar tu
+                                            clave:
+                                            nunca te llamaremos para pedir tu clave secreta.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;"
+                                         data-slick-index="-2"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span
+                                                class="ion-ios-world-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Por tu seguridad,
+                                            verifica
+                                            que la URL de bancochile.cl comience con https://</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;"
+                                         data-slick-index="-1"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span class="icon-icon-screen text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Accede al sitio del
+                                            banco
+                                            escribiendo directamente la dirección en tu navegador. Nunca entres a través
+                                            de
+                                            links.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="0"
+                                         aria-hidden="true" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide00">
+                                        <div class="icono"><span
+                                                class="bch-custom-icon-clubes text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Mantén tu antivirus
+                                            actualizado. Nunca te obligaremos a descargar un archivo.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-current slick-active"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="1"
+                                         aria-hidden="false" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide01">
+                                        <div class="icono"><span
+                                                class="icono-bch-linkExterno text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Nunca incluiremos un
+                                            link
+                                            en nuestros emails. Si alguien lo hace, es una estafa.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-active"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="2"
+                                         aria-hidden="false" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide02">
+                                        <div class="icono"><span
+                                                class="ion-ios-email-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Verifica siempre la
+                                            fuente
+                                            de tus correos; atento a premios y mensajes extraños.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-active"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="3"
+                                         aria-hidden="false" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide03">
+                                        <div class="icono"><span
+                                                class="ion-ios-locked-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Es clave no dar tu
+                                            clave:
+                                            nunca te llamaremos para pedir tu clave secreta.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="4"
+                                         aria-hidden="true" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide04">
+                                        <div class="icono"><span
+                                                class="ion-ios-world-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Por tu seguridad,
+                                            verifica
+                                            que la URL de bancochile.cl comience con https://</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="5"
+                                         aria-hidden="true" tabindex="-1" role="option"
+                                         aria-describedby="slick-slide05">
+                                        <div class="icono"><span class="icon-icon-screen text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Accede al sitio del
+                                            banco
+                                            escribiendo directamente la dirección en tu navegador. Nunca entres a través
+                                            de
+                                            links.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="6"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span
+                                                class="bch-custom-icon-clubes text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Mantén tu antivirus
+                                            actualizado. Nunca te obligaremos a descargar un archivo.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="7"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span
+                                                class="icono-bch-linkExterno text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Nunca incluiremos un
+                                            link
+                                            en nuestros emails. Si alguien lo hace, es una estafa.</p></div>
+                                    </div>
+                                    <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned"
+                                         ng-repeat="item in listCarouselTips" style="width: 370px;" data-slick-index="8"
+                                         aria-hidden="true" tabindex="-1">
+                                        <div class="icono"><span
+                                                class="ion-ios-email-outline text-primary px-30"></span>
+                                        </div>
+                                        <div class="description"><p class="px-12 mb-0 ng-binding">Verifica siempre la
+                                            fuente
+                                            de tus correos; atento a premios y mensajes extraños.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next"
+                                    role="button" style="display: block;">Next
+                            </button>
+                        </slick>
+                    </div>
+                </div>
+            </div><!-- end ngIf: state.current.name == 'login' -->
+            <div class="container">
+                <div class="row">
+                    <div class="logo-footer col-xs-6 col-sm-3 col-md-3 col-lg-3"><a tabindex="-1"
+                                                                                    href="http://www.bancochile.cl/"><span
+                            class="icon-logo-banco"></span></a></div><!-- ngIf: !isCambioClaveCiam() -->
+                    <div class="liniealateral col-xs-6 col-sm-3 col-md-3 col-lg-3 ng-scope"
+                         ng-if="!isCambioClaveCiam()">
+                        <ul class="list-unstyled">
+                            <li>Casa Matriz: Ahumada 251, Santiago de Chile</li>
+                            <li>Mesa Central: [+56 2] 2653 1111</li>
+                            <li>Fonobank 600 637 3737</li>
+                        </ul>
+                    </div><!-- end ngIf: !isCambioClaveCiam() --><!-- ngIf: !isCambioClaveCiam() -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ng-scope" ng-if="!isCambioClaveCiam()">
+                        <ul class="list-unstyled">
+                            <li>Infórmese sobre la garantía estatal de los depósitos en su banco o en www.sbif.cl</li>
+                            <li>Citi y el diseño del arco es una marca de servicio registrada de Citigroup Inc. Uso bajo
+                                licencia
+                            </li>
+                            <li></li>
+                            <li><b>© 2018, Banco de Chile. Todos los Derechos Reservados</b></li>
+                            <li></li>
+                        </ul>
+                    </div><!-- end ngIf: !isCambioClaveCiam() --><!--  --><!-- ngIf: isCambioClaveCiam() -->
+                    <!-- ngIf: isCambioClaveCiam() --></div>
+            </div>
+        </footer>
+    </div>

